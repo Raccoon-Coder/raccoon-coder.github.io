@@ -1,0 +1,9 @@
+{
+  "name": "raccoon-coder",
+  "scripts": {
+    "start": "browser-sync start --server --files **/* --browser \"chrome\""
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
