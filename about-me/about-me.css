@@ -10,7 +10,7 @@
 }
 
 .about-me-container img {
-    width: 246px;
+    width: 246px !important;
     height: 205px;
     border-radius: 3%;
     border: 1px solid rgb(101, 255, 93); 
