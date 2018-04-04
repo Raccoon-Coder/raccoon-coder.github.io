@@ -68,14 +68,23 @@ a:hover{
 }
 
 .nav a {
-    text-decoration: none;    
+    text-decoration: none;   
+    width: 100%;
+    display: inline-block
 }
+
 .nav a:visited {
     color: white;
 }
 
 .nav a:hover {
     color: paleturquoise;
+}
+
+
+.nav a:active{
+    position: relative;
+    top: 1px;
 }
 
 .description {
