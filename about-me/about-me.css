@@ -11,6 +11,7 @@
 }
 
 .about-me-container img {
+    margin: auto;
     flex-shrink: 0;
     width: 246px;
     height: 205px;
