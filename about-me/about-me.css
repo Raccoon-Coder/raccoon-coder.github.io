@@ -7,10 +7,12 @@
     .about-me-container{
         flex-direction: column;
     }
+
 }
 
 .about-me-container img {
-    width: 246px !important;
+    flex-shrink: 0;
+    width: 246px;
     height: 205px;
     border-radius: 3%;
     border: 1px solid rgb(101, 255, 93); 
