@@ -4,6 +4,8 @@
         <title>Raccoon Coder</title>
         <link rel="stylesheet" type="text/css" href="/shared.css"/>
         <link rel="stylesheet" type="text/css" href="/games/games.css"/>
+        <link rel="stylesheet" type="text/css" href="snake.css"/>
+        <script src="snake.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -19,18 +21,27 @@
             </nav>
         </header>
         <main>
+            <div class="game-container">
+                <div class="game-area" id="snake-game" tabindex="0">
+                    <canvas id="game-canvas" width="600" height="360">
+
+                    </canvas>
+                    <label id="score">Score: <span id="js-score">0</span></label>
+                    <div id="game-over-screen">
+                    <h2>Game Over</h2>
+                    <p>Press any button to restart</p>
+                    </div>
+                </div>
+            </div>
             <div class="description">
                 <h2>Description</h2>
                 <p>
-                    This is the games section. Here you will find games made by me. Feel free to give me suggestions on games and projects in my GitHub repository.
+                    Welcome to the Snake Game! Eat away the food while not touching the edges or eating yourself. Have fun and try to break my highscore!
                 </p>
+                <p class="my-highscore">My highscore: 30</p>
+                <p class="made-with">Made with: Html, CSS and JavaScript</p>
             </div>
-            <div class="game-boxes">
-                <div class="game-box">
-                    <a href="snake-game">The snake</a>
-                    <a href="snake-game"><img src="/images/snake-game-thumbnail.png"></a>
-                </div>
-            </div>
+        </main>
         <footer class="footer">
             <div>
                 © Raccoon Coder 2018
