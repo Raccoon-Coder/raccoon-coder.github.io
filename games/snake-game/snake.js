@@ -1,6 +1,12 @@
 const CANVAS_WIDTH = 600;
 const CANVAS_HEIGHT = 360;
 const CELL_SIZE = 20;
+const DIRECTION_ANGLES = {
+    up: -Math.PI * 0.5,
+    right: 0,
+    down: Math.PI / 2,
+    left: Math.PI
+};
 
 class Snake {
     constructor(x, y) {
@@ -47,18 +53,19 @@ class Snake {
                 newHead = {x: oldHead.x, y: oldHead.y - 1};
         } else if(this.direction === 'down') {
                 newHead = {x: oldHead.x, y: oldHead.y + 1};
-        }
-
-        if(this.hasEaten){
-            this.hasEaten = false;
+            }
+            
+            if(this.hasEaten){
+                this.hasEaten = false;
         } else {
             this.parts.pop();
         }
         this.parts = [newHead, ...this.parts];
     }
-
+    
     paint(context) {
-        const border = 2;
+        const border = 0.05 * CELL_SIZE;
+        this.paintTongue(context);
         for(const part of this.parts) {
             const {x, y} = part;
             context.fillStyle = 'lightgray'; 
@@ -66,8 +73,59 @@ class Snake {
             context.fillStyle = 'blue'; 
             context.fillRect(CELL_SIZE * x + border, CELL_SIZE * y + border, CELL_SIZE - border * 2, CELL_SIZE - border * 2);
         }
+        this.paintEyes(context);
     }
 
+    paintEyes(context) {
+        if(this.direction === 'left') {
+            this.paintEye(context, CELL_SIZE * 0.05, CELL_SIZE * 0.05);
+            this.paintEye(context, CELL_SIZE * 0.05, CELL_SIZE * 0.7);
+        } else if(this.direction === 'right') {
+            this.paintEye(context, CELL_SIZE * 0.7, CELL_SIZE * 0.05);
+            this.paintEye(context, CELL_SIZE * 0.7, CELL_SIZE * 0.7);
+        } else if(this.direction === 'up') {
+            this.paintEye(context, CELL_SIZE * 0.7, CELL_SIZE * 0.05);
+            this.paintEye(context, CELL_SIZE * 0.05, CELL_SIZE * 0.05);
+        } else if(this.direction === 'down') {
+            this.paintEye(context, CELL_SIZE * 0.7, CELL_SIZE * 0.7);
+            this.paintEye(context, CELL_SIZE * 0.05, CELL_SIZE * 0.7);
+        }   
+    }
+    
+    paintEye(context, eyeX, eyeY) {
+        context.fillStyle = 'yellow'
+        context.fillRect (
+            CELL_SIZE * this.x + eyeX,
+            CELL_SIZE * this.y + eyeY,
+            CELL_SIZE / 4,
+            CELL_SIZE / 4
+        );
+        context.fillStyle = 'black'
+        context.fillRect (
+            CELL_SIZE * this.x + eyeX + CELL_SIZE / 14,
+            CELL_SIZE * this.y + eyeY  + CELL_SIZE / 14,
+            CELL_SIZE / 7,
+            CELL_SIZE / 7
+        );   
+    }
+    
+    paintTongue(context, tongueX, tongueY) {
+        context.fillStyle = 'red'
+        context.translate(CELL_SIZE * (this.x + 0.5), CELL_SIZE * (this.y + 0.5));    
+        context.rotate(DIRECTION_ANGLES[this.direction]);
+        context.beginPath();
+        const height = CELL_SIZE * 0.155;
+        const length = CELL_SIZE * 1.22;
+        context.moveTo(0, height);
+        context.lineTo(length, height);
+        context.lineTo(length * 0.7, 0);
+        context.lineTo(length, -height);
+        context.lineTo(0, -height);
+        context.closePath();
+        context.fill();
+        context.setTransform(1,0,0,1,0,0);
+    }
+    
     eatSelf() {
         for(let i = 1; i < this.parts.length; i++) {
             if(this.parts[i].x === this.x && this.parts[i].y === this.y) {
