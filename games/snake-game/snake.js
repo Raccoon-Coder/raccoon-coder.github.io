@@ -29,14 +29,17 @@ class Snake {
     }
 
     changeDirection(direction) {
-        if(direction === 'up' && this.direction === 'down') {
-            return;
-        } else if(direction === 'down' && this.direction === 'up') {
-            return;
-        } else if(direction === 'right' && this.direction === 'left') {
-            return;
-        } else if(direction === 'left' && this.direction === 'right') {
-            return;
+        const secondPart = this.parts[1];
+        if(secondPart) {
+            if(direction === 'up' && secondPart.y < this.y) {
+                return;
+            } else if(direction === 'down' && secondPart.y > this.y) {
+                return;
+            } else if(direction === 'right' && secondPart.x > this.x) {
+                return;
+            } else if(direction === 'left' && secondPart.x < this.x) {
+                return;
+            }
         }
 
         this.direction = direction;
@@ -110,7 +113,7 @@ class Snake {
     }
     
     paintTongue(context, tongueX, tongueY) {
-        context.fillStyle = 'red'
+        context.fillStyle = '#d00000'
         context.translate(CELL_SIZE * (this.x + 0.5), CELL_SIZE * (this.y + 0.5));    
         context.rotate(DIRECTION_ANGLES[this.direction]);
         context.beginPath();
@@ -149,9 +152,10 @@ class SnakeGame {
         this.gridWidth = CANVAS_WIDTH / CELL_SIZE;
         this.gridHeight = CANVAS_HEIGHT / CELL_SIZE;
         this.snake = new Snake(Math.floor(this.gridWidth / 2), Math.floor(this.gridHeight / 2)); 
-
         this.addEventListeners();
         this.moveByOne = this.moveByOne.bind(this);
+        this.hiscore = localStorage.getItem('snake-hiscore') || 0;
+        document.getElementById('js-hiscore').innerHTML = this.hiscore;
     }
 
     addEventListeners() {
@@ -188,7 +192,7 @@ class SnakeGame {
         this.interval = setInterval(this.moveByOne, 1000);
         document.getElementById('game-over-screen').style.display = 'none';
         this.score = 0;
-        document.getElementById('js-score').innerHTML = this.score;
+        document.getElementById('js-current-score').innerHTML = this.score;
     }
     
     moveByOne() {
@@ -199,7 +203,7 @@ class SnakeGame {
         }
         if(this.snake.x === this.foodLocation.x && this.snake.y === this.foodLocation.y) {
             this.score += 1;
-            document.getElementById('js-score').innerHTML = this.score;
+            document.getElementById('js-current-score').innerHTML = this.score;
             this.addFood();
             this.snake.eat();
             clearInterval(this.interval);
@@ -210,8 +214,14 @@ class SnakeGame {
     endGame() {
         clearInterval(this.interval);
         document.getElementById('game-over-screen').style.display = 'block';
-        this.interval = false;
+        if(this.score > this.hiscore) {
+            this.hiscore = this.score;
+            localStorage.setItem('snake-hiscore', this.hiscore)
+            document.getElementById('js-hiscore').innerHTML = this.hiscore;
+        }
+        setTimeout(() => this.interval = false, 1000);
     }
+
     paint() {
         this.context.clearRect(0,0,CANVAS_WIDTH, CANVAS_HEIGHT)
         this.snake.paint(this.context);

@@ -4,10 +4,16 @@
     margin: 30px auto;
 }
 
-#score {
+#current-score {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+#hiscore {
+    position: absolute;
+    top: 10px;
+    right: 10px
 }
 
 .game-area {
