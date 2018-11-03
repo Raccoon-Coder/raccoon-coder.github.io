@@ -1,14 +1,55 @@
 
 .game-box {
+    display: flex;
     background-color: rgb(80, 80, 80);
-    width: 190px;
-    height: 110px;
-    margin: 20px; 
-    text-align: center;   
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.game-box div:first-child {
+    width: 30%;
+    flex-grow: 0;
+    min-width: 100px;
+    align-self: center;
+    flex-shrink: 0;
+}
+.game-box .game-description {
+    flex-grow: 1;
 }
 
 .game-box img {
-    width: 165px;
-    height: 70px;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.game-description {
+    padding-left: 10px;
+}
+
+.game-description h3 {
+    text-align: center;
+}
+
+.game-description p {
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 450px) {
+    .game-box {
+        flex-direction: column;
+    }
+    .game-box div:first-child {
+        order: 2;
+        align-self: center;
+        width: 80%;
+        max-width: 250px;
+    }
+    .game-box .game-description {
+        /*flex-grow: 1;*/
+        order: 1;
+    }
+
 }
