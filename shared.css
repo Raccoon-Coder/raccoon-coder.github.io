@@ -18,9 +18,14 @@ header, main {
     margin: auto;
 }
 
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 h1, h2 {
     color: rgb(233, 233, 233);
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 }
 
 h6 {
@@ -49,6 +54,7 @@ a:hover{
     background-color: rgb(66, 66, 66);
     border: 1px solid rgb(196, 196, 196); 
     border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 }
 
 .nav ul{
