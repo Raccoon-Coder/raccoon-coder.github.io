@@ -1,9 +1,10 @@
 html {
-    background: rgb(24, 24, 36);
+    /* background-color: rgb(24, 24, 36); */
+    background-color: rgb(153, 33, 20);
     height: 100%;
 }
 
-body{
+body {
     position: relative;
     min-height: 100%;
     margin: 0;
@@ -34,24 +35,25 @@ h6 {
 }
 
 
-a{
+a {
     color: white;
     font-weight: bold;
 }
 
-a:visited{
+a:visited {
     color: paleturquoise;
     font-weight: bold;
 }
 
-a:hover{
+a:hover {
     color: rgb(184, 184, 184);
     font-weight: bolder;
 }
 
 .nav {
     width: 100%;
-    background-color: rgb(66, 66, 66);
+    /* background-color: rgb(66, 66, 66); */
+    background-color: rgba(46, 10, 10, 0.459);
     border: 1px solid rgb(196, 196, 196); 
     border-radius: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
@@ -102,7 +104,8 @@ a:hover{
 .description {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(233, 233, 233);
-    background-color: rgba(80, 80, 80, 0.450);
+    /* background-color: rgba(80, 80, 80, 0.450); */
+    background-color: rgba(66, 30, 30, 0.459);
     margin: auto;
     margin-top: 40px;
     padding: 17px;
@@ -117,19 +120,19 @@ footer {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgb(80, 80, 80);
+    /* background-color: rgb(80, 80, 80); */
+    background-color: rgba(46, 10, 10, 0.459);
     height: 70px;
     text-align: center;
     box-sizing: border-box;
     border-top: 2px solid rgb(196, 196, 196)
-
 }
 
 footer > div {
     padding-top: 30px;
     max-width: 1000px;
     margin: auto;
-    position:  relative;
+    position: relative;
 }
 
 footer img {
