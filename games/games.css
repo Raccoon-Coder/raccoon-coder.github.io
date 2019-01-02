@@ -1,8 +1,10 @@
 
 .game-box {
     display: flex;
-    /* background-color: rgb(80, 80, 80); */
+    background-color: rgb(80, 80, 80);
+    /* Christmas Colors
     background-color: rgba(56, 20, 20, 0.459);
+    */
     width: 100%;
     padding: 10px;
     margin-top: 10px;

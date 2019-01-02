@@ -1,6 +1,8 @@
 html {
-    /* background-color: rgb(24, 24, 36); */
+    background-color: rgb(24, 24, 36);
+    /* Christmas Colors
     background-color: rgb(153, 33, 20);
+    */
     height: 100%;
 }
 
@@ -52,8 +54,10 @@ a:hover {
 
 .nav {
     width: 100%;
-    /* background-color: rgb(66, 66, 66); */
+    background-color: rgb(66, 66, 66);
+    /* Christmas Colors
     background-color: rgba(46, 10, 10, 0.459);
+    */
     border: 1px solid rgb(196, 196, 196); 
     border-radius: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
@@ -104,8 +108,10 @@ a:hover {
 .description {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(233, 233, 233);
-    /* background-color: rgba(80, 80, 80, 0.450); */
+    background-color: rgba(80, 80, 80, 0.450);
+    /* Christmas Colors
     background-color: rgba(66, 30, 30, 0.459);
+    */
     margin: auto;
     margin-top: 40px;
     padding: 17px;
@@ -120,8 +126,10 @@ footer {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    /* background-color: rgb(80, 80, 80); */
+    background-color: rgb(80, 80, 80);
+    /* Christmas Colors
     background-color: rgba(46, 10, 10, 0.459);
+    */
     height: 70px;
     text-align: center;
     box-sizing: border-box;
