@@ -1,23 +1,23 @@
 .about-me-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 450px) {
-    .about-me-container{
-        flex-direction: column;
-    }
-
+  .about-me-container {
+    flex-direction: column;
+  }
 }
 
 .about-me-container img {
-    margin: auto;
-    flex-shrink: 0;
-    width: 246px;
-    height: 205px;
-    border-radius: 3%;
-    border: 1px solid rgb(101, 255, 93); 
+  margin: auto;
+  flex-shrink: 0;
+  width: 246px;
+  height: 205px;
+  border-radius: 3%;
+  border: 1px solid rgb(101, 255, 93);
 }
+
 .about-me-container p {
-    padding: 20px;
+  padding: 20px;
 }

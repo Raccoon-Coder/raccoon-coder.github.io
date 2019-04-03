@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="/games/snake-game/snake.css"/>
+<link rel="stylesheet" type="text/css" href="/games/snake-game/snake.css" />
 {% endblock %}
 
 {% block js %}
@@ -11,26 +11,29 @@
 {% block content %}
 
 <div class="game-container">
-    <div class="game-area" id="snake-game" tabindex="0">
-        <canvas id="game-canvas" width="600" height="360">
+  <div class="game-area" id="snake-game" tabindex="0">
+    <canvas id="game-canvas" width="600" height="360">
 
-        </canvas>
-        <label id="current-score">Current score: <span id="js-current-score">0</span></label>
-        <label id="hiscore">Hiscore: <span id="js-hiscore">0</span></label>
-        <div id="game-over-screen">
-        <h2>Game Over</h2>
-        <p>Press any button to restart</p>
-        </div>
+    </canvas>
+    <label id="current-score">Current score: <span id="js-current-score">0</span></label>
+    <label id="hiscore">Hiscore: <span id="js-hiscore">0</span></label>
+    <div id="game-over-screen">
+      <h2>Game Over</h2>
+      <p>Press any button to restart</p>
     </div>
+  </div>
 </div>
 <div class="description">
-    <div class="instructions">
-        <h2>Instructions</h2>
-        <p>Move with arrow keys or WASD and try to eat the food. Every time you eat food, your score will increase and the snake will get bigger and faster. You can <strong> <em> not </em> </strong> turn the opposite way instantly with one turn. If you try to eat yourself or hit the border, the snake will die. Have fun and try to beat my highscore!</p>
-    </div>
-    <p class="my-highscore">My highscore: 44</p>
-    <p class="made-with">Made with: Html, CSS and JavaScript</p>
+  <div class="instructions">
+    <h2>Instructions</h2>
+    <p>Move with arrow keys or WASD and try to eat the food. Every time you eat food, your score will increase and
+      the snake will get bigger and faster. You can <strong> <em> not </em> </strong> turn the opposite way
+      instantly with one turn. If you try to eat yourself or hit the border, the snake will die. Have fun and try
+      to beat my highscore!
+    </p>
+  </div>
+  <p class="my-highscore">My highscore: 44</p>
+  <p class="made-with">Made with: Html, CSS and JavaScript</p>
 </div>
 
 {% endblock %}
-
