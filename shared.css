@@ -1,150 +1,159 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url(/fonts/Fira_Sans/FiraSans-Regular.ttf);
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
 html {
-    background-color: rgb(24, 24, 36);
-    /* Christmas Colors
+  background-color: rgb(24, 24, 36);
+  /* Christmas Colors
     background-color: rgb(153, 33, 20);
     */
-    height: 100%;
+  height: 100%;
+  font-family: Montserrat;
 }
 
 body {
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    padding: 10px;
-    padding-bottom: 80px;
-    color: rgb(233, 233, 233);
-    box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 80px;
+  color: rgb(200, 200, 200);
+  box-sizing: border-box;
 }
 
 header, main {
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
 p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 25px;
+}
+
+h1 a:link, h1 a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 h1, h2 {
-    color: rgb(233, 233, 233);
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+  color: rgb(233, 233, 233);
+  text-align: center;
 }
 
 h6 {
-    font-weight: 50;
-    opacity: 0.6;
+  font-weight: 50;
+  opacity: 0.6;
 }
 
-
 a {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 
 a:visited {
-    color: paleturquoise;
-    font-weight: bold;
+  color: paleturquoise;
+  font-weight: bold;
 }
 
 a:hover {
-    color: rgb(184, 184, 184);
-    font-weight: bolder;
+  color: rgb(184, 184, 184);
+  font-weight: bolder;
 }
 
 .nav {
-    width: 100%;
-    background-color: rgb(66, 66, 66);
-    /* Christmas Colors
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+  /* Christmas Colors
     background-color: rgba(46, 10, 10, 0.459);
     */
-    border: 1px solid rgb(196, 196, 196); 
-    border-radius: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
 }
 
-.nav ul{
-    margin: 0;
-    padding: 10px 15px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: space-between;
+.nav ul {
+  margin: 0;
+  padding: 10px 15px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
-.nav ul li{
-    display: flex;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    border-right: 1px dashed rgb(196, 196, 196);
+.nav ul li {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  border-right: 1px solid rgb(196, 196, 196);
 }
 
-.nav ul li:last-child{
-    border: 0;
+.nav ul li:last-child {
+  border: 0;
 }
 
 .nav a {
-    text-decoration: none;   
-    width: 100%;
-    display: inline-block
+  text-decoration: none;
+  width: 100%;
+  display: inline-block
 }
 
 .nav a:visited {
-    color: white;
+  color: white;
 }
 
 .nav a:hover {
-    color: paleturquoise;
+  color: paleturquoise;
 }
 
-
-.nav a:active{
-    position: relative;
-    top: 1px;
+.nav a:active {
+  position: relative;
+  top: 1px;
 }
 
 .description {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(233, 233, 233);
-    background-color: rgba(80, 80, 80, 0.450);
-    /* Christmas Colors
+  color: rgb(233, 233, 233);
+  background-color: rgba(80, 80, 80, 0.450);
+  /* Christmas Colors
     background-color: rgba(66, 30, 30, 0.459);
     */
-    margin: auto;
-    margin-top: 40px;
-    padding: 17px;
-    border: 1px solid rgb(196, 196, 196);
-    width: 850px;
-    max-width: 100%;
-    box-sizing: border-box;
+  margin: auto;
+  margin-top: 40px;
+  padding: 17px;
+  border: 1px solid rgb(196, 196, 196);
+  width: 850px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: rgb(80, 80, 80);
-    /* Christmas Colors
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgb(80, 80, 80);
+  /* Christmas Colors
     background-color: rgba(46, 10, 10, 0.459);
     */
-    height: 70px;
-    text-align: center;
-    box-sizing: border-box;
-    border-top: 2px solid rgb(196, 196, 196)
+  height: 70px;
+  text-align: center;
+  box-sizing: border-box;
+  border-top: 2px solid rgb(196, 196, 196)
 }
 
-footer > div {
-    padding-top: 30px;
-    max-width: 1000px;
-    margin: auto;
-    position: relative;
+footer>div {
+  padding-top: 30px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
 }
 
 footer img {
-    position: absolute;
-    right: 10px;
-    top: 20px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
 }
