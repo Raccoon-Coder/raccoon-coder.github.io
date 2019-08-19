@@ -70,7 +70,7 @@ a:hover {
     background-color: rgba(46, 10, 10, 0.459);
     */
   border: 1px solid rgb(196, 196, 196);
-  border-radius: 18px;
+  border-radius: 15px;
 }
 
 .nav ul {
@@ -125,6 +125,7 @@ a:hover {
   margin-top: 40px;
   padding: 17px;
   border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
   width: 850px;
   max-width: 100%;
   box-sizing: border-box;
